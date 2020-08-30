@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Introduction
+
+This project's sample app shows how an application built with Lynx+JSON can be combined with an application built with React to create a hybrid application and hyperlinks can be used to deep-link and transition between the two apps.
+
+The significant parts of this sample app to review are:
+* public/index.html, configured to host root views for both React and Lynx apps
+* src/App.js, configured to route all requests for Lynx resources to the LynxApp React component, using a wildcard path because there's only one media type and rendering engine with Lynx apps, plus normal React routing to its many rendering engines which consume a system's many media types
+* src/LynxApp.js, configured to simulate the import of a Lynx app's JavaScript bundle and wire it up with React app
+* config/lynx/index.js, configured to serve to Lynx+JSON resources to simulate a Lynx origin server
+
 ## Available Scripts
 
 In the project directory, you can run:

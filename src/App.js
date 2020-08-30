@@ -1,15 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import Lynx from './Lynx';
-import OrderManage from './OrderManage';
+import LynxApp from './LynxApp';
+import ReactFirst from './ReactFirst';
+import ReactSecond from './ReactSecond';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/lynx/*" component={ Lynx } />
-        <Route path="/react/*" component={ OrderManage } />
-        <Redirect to="/react/" />
+        <Route path="/lynx/*" render={ (props) => <LynxApp {...props} startAtPath={'/lynx/first'} /> } />
+        <Route path="/react/first" component={ ReactFirst } />
+        <Route path="/react/second" component={ ReactSecond } />
+        <Redirect to="/react/first" />
       </Switch>
     </Router>
   );
