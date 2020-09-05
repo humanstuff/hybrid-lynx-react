@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/lynx/*" render={ (props) => <LynxApp {...props} startAtPath={'/lynx/first'} /> } />
+        <Route path="/lynx/*" component={ LynxApp } />
         <Route path="/react/first" component={ ReactFirst } />
         <Route path="/react/second" component={ ReactSecond } />
         <Redirect to="/react/first" />

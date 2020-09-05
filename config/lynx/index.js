@@ -64,7 +64,8 @@ module.exports = exports = function (app) {
           spec: {
             hints: [ 'header', 'container' ],
             children: [
-              { name: 'label' }
+              { name: 'label' },
+              { name: 'react' }
             ]
           },
           value: {
@@ -73,6 +74,20 @@ module.exports = exports = function (app) {
                 hints: [ 'label', 'text' ]
               },
               value: 'Lynx App / Second Page'
+            },
+            react: {
+              spec: {
+                hints: [ 'content' ]
+              },
+              value: {
+                type: 'application/react+json',
+                data: {
+                  component: 'ReactNested',
+                  props: {
+                    message: 'This is a React component nested inside of a Lynx page.'
+                  }
+                }
+              }
             }
           }
         },
