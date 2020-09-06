@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import LynxApp from './LynxApp';
-import ReactFirst from './ReactFirst';
-import ReactSecond from './ReactSecond';
+import LynxApp from './components/LynxApp';
+import ReactFirst from './components/ReactFirst';
+import ReactSecond from './components/ReactSecond';
 
 function App() {
   return (
